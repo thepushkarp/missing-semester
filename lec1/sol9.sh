@@ -10,4 +10,5 @@ elif [ $# -gt 1 ]; then
     echo "$0: Error! Please provide only one argument!" >&2; exit 1
 fi
 
-date -r $1 > ~/last-modified.txt
+$1 | grep -i "last-modified" > /home/last-modified.txt
+
